@@ -35,9 +35,9 @@ Resources:
   getAllItemsFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ./
-      Handler: src/handlers/get-all-items.getAllItemsHandler
-      Runtime: nodejs10.x
+      CodeUri: vdashboard/
+      Handler: app.lambda_handler
+      Runtime: python3.8
       MemorySize: 128
       Timeout: 60
       Description: A simple example includes a HTTP get method to get all items from a DynamoDB table.
@@ -62,9 +62,9 @@ Resources:
   getByIdFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ./
-      Handler: src/handlers/get-by-id.getByIdHandler
-      Runtime: nodejs10.x
+      CodeUri: vdashboard/
+      Handler: app.lambda_handler
+      Runtime: python3.8
       MemorySize: 128
       Timeout: 60
       Description: A simple example includes a HTTP get method to get one item by id from a DynamoDB table.
@@ -89,9 +89,9 @@ Resources:
   putItemFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ./
-      Handler: src/handlers/put-item.putItemHandler
-      Runtime: nodejs10.x
+      CodeUri: vdashboard/
+      Handler: app.lambda_handler
+      Runtime: python3.8
       MemorySize: 128
       Timeout: 60
       Description: A simple example includes a HTTP post method to add one item to a DynamoDB table.
